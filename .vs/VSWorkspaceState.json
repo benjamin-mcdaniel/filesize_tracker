@@ -1,6 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Data_Growth_Moitor",
+    "\\Data_Growth_Moitor\\Active_Build",
+    "\\Data_Growth_Moitor\\Active_Build\\Config",
+    "\\Data_Growth_Moitor\\Active_Build\\Config\\Cloud",
+    "\\Data_Growth_Moitor\\Active_Build\\Config\\Local",
+    "\\Data_Growth_Moitor\\Active_Build\\Data",
+    "\\Data_Growth_Moitor\\Active_Build\\Scripts",
+    "\\Python\\learning"
   ],
+  "SelectedNode": "\\Data_Growth_Moitor\\Active_Build\\Scripts\\quick_report.py",
   "PreviewInSolutionExplorer": false
 }

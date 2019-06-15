@@ -1,0 +1,50 @@
+
+Server:
+
+main server applance
+|- runs timer
+|- runs scripts
+|- checks script progress
+|- reports back to web client
+|- updates historical run report
+
+Scripts:
+
+light report
+|- lists all folders
+|- counts parent directory folders and files
+|- does size check on parent directory
+
+heavy report
+#phase1
+|- lists all folders
+|- counts parent directory folders and files
+|- does size check on parent directory
+#phase2
+|- finds full size of all folders
+|- finds full file count of all folders
+|- last edit dates
+
+complete report
+#phase1
+|- lists all folders
+|- counts parent directory folders and files
+|- does size check on parent directory
+#phase2
+|- finds full size of all folders
+|- finds full file count of all folders
+|- last edit dates
+#phase3
+|- file extention count on all directories
+|- Average file size for each file type
+
+
+upkeep
+|- run at startup
+|- loads config for main server
+|- run to update config after edit
+
+Config creator
+|- takes new variables and creates new configs
+
+
