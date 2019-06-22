@@ -8,8 +8,6 @@ import glob
 # change working directory
 os.chdir(r"C:\Users\benja\Source\Repos\sandbox")
 path = os.getcwd()
-# indicate its running
-
 # announce start
 print(' -------------- Starting --------------')
 print(path)
@@ -48,6 +46,6 @@ for (dirpath,dirnames,filenames) in walk(path):
 
 # with open(current_dir, 'w', newline='\n', ) as csvfile:
 #    csvwriter = csv.writer(csvfile)
-#    
+#
 #    csvwriter.writerows([Fields])
 #    csvwriter.writerows([folders])
