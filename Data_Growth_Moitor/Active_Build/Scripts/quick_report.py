@@ -16,7 +16,7 @@ path = os.getcwd()
 
 folder_list = os.walk(".")
 print(folder_list, 'test')
-
+# test
 size = 0
 count = 0
 for folder in folder_list:
