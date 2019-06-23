@@ -1,24 +1,34 @@
 
 # define imports
 import os
-from os.path import getsize
-from os import walk
+from os.path import join, getsize
 import glob
+import csv
 
-# change working directory
-os.chdir(r"C:\Users\benja\Source\Repos\sandbox")
-path = os.getcwd()
 # indicate its running
 
-# announce start
-print(' -------------- Starting --------------')
-print(path)
 print(' -------------- Starting --------------')
 
-# Start scraping
+# change the working directory so we can test the script against the code dir
+os.chdir(r"C:\Users\benja\Source\Repos\sandbox")
+print(os.getcwd())
+path = os.getcwd()
 
+folder_list = os.walk(".")
+print(folder_list, 'test')
+
+size = 0
+count = 0
+for folder in folder_list:
+    for root, dirs, files in os.walk('.'):
+        size += sum(getsize(join(root, name)) for name in files)
+        count += len(files)
+        mb = size/1000
+print("folders", count, "files in KB", mb)
+
+from os import walk
+path = os.getcwd()
 for (dirpath,dirnames,filenames) in walk(path):
-
     size = sum(getsize(name) for name in files)
     count += len(files)
     kb = size / 1000

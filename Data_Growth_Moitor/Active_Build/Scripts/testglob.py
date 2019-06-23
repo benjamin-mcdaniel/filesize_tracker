@@ -6,24 +6,23 @@ from os import walk
 import glob
 
 # change working directory
-os.chdir(r"C:\Users\benja\Source\Repos\sandbox")
-path = os.getcwd()
+# os.chdir(r"C:\Users\benja\Source\Repos\sandbox")
+# path = os.getcwd()
+path = "c:\\"
 # announce start
 print(' -------------- Starting --------------')
 print(path)
 print(' -------------- Starting --------------')
 
 # Start scraping
-
+print("------------------------")
 for (dirpath,dirnames,filenames) in walk(path):
-
-    size = sum(getsize(name) for name in files)
-    count += len(files)
-    kb = size / 1000
-    print(dirnames,count,kb )
-
-
-
+        size = 0
+        count = 0
+        count = len(filenames)
+        folders = 0
+        folders = len(dirnames)
+        print(dirpath,"Folders:",folders,"Files:",count)
 
 
 # folders = [x[0] for x in os.walk(os.getcwd())]
