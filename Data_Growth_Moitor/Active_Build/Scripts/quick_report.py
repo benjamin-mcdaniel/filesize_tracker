@@ -13,10 +13,7 @@ print(' -------------- Starting --------------')
 os.chdir(r"C:\Users\benja\Source\Repos\sandbox")
 print(os.getcwd())
 path = os.getcwd()
-
 folder_list = os.walk(".")
-print(folder_list, 'test')
-# test
 size = 0
 count = 0
 for folder in folder_list:
@@ -29,13 +26,22 @@ print("folders", count, "files in KB", mb)
 from os import walk
 path = os.getcwd()
 for (dirpath,dirnames,filenames) in walk(path):
-    size = sum(getsize(name) for name in files)
+    folder_size = 0
+    folder_size = sum(getsize(dirpath) for name in folder_list)
     count += len(files)
     kb = size / 1000
     print(dirnames,count,kb )
 
 
-
+def get_size(start_path = '.'):
+    total_size = 0
+    for dirpath, dirnames, filenames in os.walk(start_path):
+        for f in filenames:
+            fp = os.path.join(dirpath, f)
+            # skip if it is symbolic link
+            if not os.path.islink(fp):
+                total_size += os.path.getsize(fp)
+    return total_size
 
 
 # folders = [x[0] for x in os.walk(os.getcwd())]
